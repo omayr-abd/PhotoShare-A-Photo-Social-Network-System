@@ -1,0 +1,11 @@
+<head>
+	<title>Userbase</title>
+</head>
+<h1>Userbase:</h1>
+	<ul>
+		{% block content %}
+		{% for id, email in url %}
+			<li><a href='/user/{{id[0]}}'>{{email[0]}}</a></li>
+		{% endfor %}
+		{% endblock %}
+    </ul>

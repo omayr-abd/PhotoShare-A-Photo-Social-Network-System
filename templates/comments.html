@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Photoshare</title>
+{% if message %}
+  <h1>{{ message }}</h1>
+{% endif %}
+
+{% if name %}
+  <h2>Photo caption: {{ name }}</h2>
+{% endif %}
+
+
+
+    <ul>
+		<h3>Photo comments:<h3>
+			{% for comment in comments %}
+				<li>{{comment[0]}}</li>
+			{% endfor %}
+    </ul>
+
+
+<p><a href='/profile'>Go to Profile</a> </p>
+
+<ul>
+<li><a href='/upload'>Upload a photo</a> </li> 
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/'>Home</a></li>
+<li><a href='/userbase'>Userbase</a> </li>
+</ul>

@@ -1,0 +1,41 @@
+<!doctype html>
+<title>Photoshare</title>
+{% if name %}
+  <h1>{{ name }}'s profile!</h1>
+{% endif %}
+
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+{% if fullalbum %}
+<h3>Albums</h3>
+	<h3>
+	{% block content %}
+	{% for album, albumname in fullalbum %}
+		<li><a href='/album/{{album[0]}}'>{{albumname[0]}}</a></li>
+	{% endfor %}
+	{% endblock %}
+	</ul>
+{% endif %}
+
+
+{% if friends %}
+<h3> Friendslist: </h3>
+	<ul>
+	{% block friendslist %}
+	{% for friendNum, friendEmail in friends %}
+		<li><a href='/user/{{friendNum[0]}}'>{{friendEmail[0]}}</a></li>
+	{% endfor %}
+	{% endblock %}
+	</ul>
+{% endif %}
+
+<p><a href='/profile'>Go to Profile</a> </p>
+
+<ul>
+<li><a href='/added/{{user_id}}'>Add friend</a> </li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/'>Home</a></li>
+<li><a href='/userbase'>Userbase</a> </li>
+</ul>

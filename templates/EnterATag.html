@@ -1,0 +1,21 @@
+<!-- author ben lawson balawson@bu.edu -->
+<head>
+    <title>Leave a tag!</title>
+</head>
+    <body>
+        <div class="title">
+            <h1>Enter your tag below</h1>
+        </div>
+            <form method="post" enctype="multipart/form-data" action="/tag/{{p_id}}">
+                <label for="tag">Enter your tag:</label>
+                <input type="tag" name="tag" required='true'/><br />
+                <input type="submit" value="Tag" />
+            </form>
+    </body>
+
+<ul>
+<li><a href='/profile'>Go to Profile</a> </li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/'>Home</a></li>
+<li><a href='/userbase'>Userbase</a> </li>
+</ul>
